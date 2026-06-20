@@ -1,4 +1,6 @@
-English | [Русский](README-RU.md)
+This is a fork of MisterZtr's LineageOS for A64 (ARM32/Binder64). I created this for use on the Insulet OmniPod 5 PDM and support for other devices is untested.
+
+
 ### To get started with building the unofficial LineageOS 23.2 GSI together with the patches,
 You'll need to get familiar with [Git and Repo](https://source.android.com/source/using-repo.html) as well as [How to build a GSI](https://github.com/phhusson/treble_experimentations/wiki/How-to-build-a-GSI%3F).
 
@@ -20,7 +22,7 @@ repo init -u https://github.com/LineageOS/android.git -b lineage-23.2 --git-lfs
 
 ### Clone the Manifest to add necessary dependencies for gsi:
  
-    git clone https://github.com/MisterZtr/treble_manifest.git .repo/local_manifests -b lineage-23.2
+    git clone https://github.com/Lost-Entrepreneur439/treble_manifest.git .repo/local_manifests -b lineage-23.2
   
 ### Afterwards, sync the source by running this command:
 
@@ -114,6 +116,7 @@ These people have helped this project in some way or another, so they should be 
 - [Iceows](https://github.com/Iceows)
 - [ChonDoit](https://github.com/ChonDoit)
 - [Nazim N ](https://github.com/naz664)
+- MisterZtr(https://github.com/MisterZtr)
 - [Ahnet](https://github.com/ahnet-69)
 - [mytja](https://github.com/mytja)
 - [cawilliamson](https://github.com/cawilliamson)
