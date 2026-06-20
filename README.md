@@ -116,7 +116,7 @@ These people have helped this project in some way or another, so they should be 
 - [Iceows](https://github.com/Iceows)
 - [ChonDoit](https://github.com/ChonDoit)
 - [Nazim N ](https://github.com/naz664)
-- MisterZtr(https://github.com/MisterZtr)
+- [MisterZtr](https://github.com/MisterZtr)
 - [Ahnet](https://github.com/ahnet-69)
 - [mytja](https://github.com/mytja)
 - [cawilliamson](https://github.com/cawilliamson)
