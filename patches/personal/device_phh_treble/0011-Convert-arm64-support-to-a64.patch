@@ -1,0 +1,140 @@
+From 120deefb2deac821617123b25fa603caa9a569e4 Mon Sep 17 00:00:00 2001
+From: Evelyn Torres <lostentrepreneur439@yahoo.com>
+Date: Sat, 20 Jun 2026 01:16:52 -0230
+Subject: [PATCH] Convert arm64 support to a64
+
+---
+ AndroidProducts.mk                           | 8 ++++----
+ lineage.mk                                   | 2 +-
+ lineage_arm64_bgN4.mk => lineage_a64_bgN4.mk | 8 ++++----
+ lineage_arm64_bgNE.mk => lineage_a64_bgNE.mk | 8 ++++----
+ lineage_arm64_bvN4.mk => lineage_a64_bvN4.mk | 6 +++---
+ lineage_arm64_bvNE.mk => lineage_a64_bvNE.mk | 6 +++---
+ 6 files changed, 19 insertions(+), 19 deletions(-)
+ rename lineage_arm64_bgN4.mk => lineage_a64_bgN4.mk (67%)
+ rename lineage_arm64_bgNE.mk => lineage_a64_bgNE.mk (71%)
+ rename lineage_arm64_bvN4.mk => lineage_a64_bvN4.mk (77%)
+ rename lineage_arm64_bvNE.mk => lineage_a64_bvNE.mk (80%)
+
+diff --git a/AndroidProducts.mk b/AndroidProducts.mk
+index 0a439c3..d11f6d2 100644
+--- a/AndroidProducts.mk
++++ b/AndroidProducts.mk
+@@ -5,7 +5,7 @@
+ #
+ 
+ PRODUCT_MAKEFILES += \
+-    $(LOCAL_DIR)/lineage_arm64_bgN4.mk \
+-    $(LOCAL_DIR)/lineage_arm64_bgNE.mk \
+-    $(LOCAL_DIR)/lineage_arm64_bvN4.mk \
+-    $(LOCAL_DIR)/lineage_arm64_bvNE.mk
++    $(LOCAL_DIR)/lineage_a64_bgN4.mk \
++    $(LOCAL_DIR)/lineage_a64_bgNE.mk \
++    $(LOCAL_DIR)/lineage_a64_bvN4.mk \
++    $(LOCAL_DIR)/lineage_a64_bvNE.mk
+diff --git a/lineage.mk b/lineage.mk
+index 527e4a1..39f5a36 100644
+--- a/lineage.mk
++++ b/lineage.mk
+@@ -4,7 +4,7 @@ $(call inherit-product, vendor/lineage/config/BoardConfigLineage.mk)
+ $(call inherit-product, device/lineage/sepolicy/common/sepolicy.mk)
+ -include vendor/lineage/build/core/config.mk
+ 
+-PRODUCT_DEVICE := generic_arm64
++PRODUCT_DEVICE := generic_a64
+ PRODUCT_MANUFACTURER := google
+ 
+ # Bootanimation
+diff --git a/lineage_arm64_bgN4.mk b/lineage_a64_bgN4.mk
+similarity index 67%
+rename from lineage_arm64_bgN4.mk
+rename to lineage_a64_bgN4.mk
+index 20e52c5..02cd84e 100644
+--- a/lineage_arm64_bgN4.mk
++++ b/lineage_a64_bgN4.mk
+@@ -1,11 +1,11 @@
+-TARGET_GAPPS_ARCH := arm64
+-include build/make/target/product/aosp_arm64.mk
++TARGET_GAPPS_ARCH := arm
++include build/make/target/product/aosp_arm.mk
+ $(call inherit-product, device/phh/treble/base.mk)
+ 
+-$(call inherit-product-if-exists, vendor/gapps/arm64/arm64-vendor.mk)
++$(call inherit-product-if-exists, vendor/gapps/arm/arm-vendor.mk)
+ $(call inherit-product, device/phh/treble/lineage.mk)
+ 
+-PRODUCT_NAME := lineage_arm64_bgN4
++PRODUCT_NAME := lineage_a64_bgN4
+ PRODUCT_BRAND := google
+ PRODUCT_MODEL := Generic System
+ 
+diff --git a/lineage_arm64_bgNE.mk b/lineage_a64_bgNE.mk
+similarity index 71%
+rename from lineage_arm64_bgNE.mk
+rename to lineage_a64_bgNE.mk
+index ad9d154..57933d4 100644
+--- a/lineage_arm64_bgNE.mk
++++ b/lineage_a64_bgNE.mk
+@@ -1,11 +1,11 @@
+-TARGET_GAPPS_ARCH := arm64
+-include build/make/target/product/aosp_arm64.mk
++TARGET_GAPPS_ARCH := arm
++include build/make/target/product/aosp_arm.mk
+ $(call inherit-product, device/phh/treble/base.mk)
+ 
+-$(call inherit-product-if-exists, vendor/gapps/arm64/arm64-vendor.mk)
++$(call inherit-product-if-exists, vendor/gapps/arm/arm-vendor.mk)
+ $(call inherit-product, device/phh/treble/lineage.mk)
+ 
+-PRODUCT_NAME := lineage_arm64_bgNE
++PRODUCT_NAME := lineage_a64_bgNE
+ PRODUCT_BRAND := google
+ PRODUCT_MODEL := Generic System
+ 
+diff --git a/lineage_arm64_bvN4.mk b/lineage_a64_bvN4.mk
+similarity index 77%
+rename from lineage_arm64_bvN4.mk
+rename to lineage_a64_bvN4.mk
+index 1990ecb..d53ca48 100644
+--- a/lineage_arm64_bvN4.mk
++++ b/lineage_a64_bvN4.mk
+@@ -1,11 +1,11 @@
+-TARGET_GAPPS_ARCH := arm64
+-include build/make/target/product/aosp_arm64.mk
++TARGET_GAPPS_ARCH := arm
++include build/make/target/product/aosp_arm.mk
+ $(call inherit-product, device/phh/treble/base.mk)
+ 
+ 
+ $(call inherit-product, device/phh/treble/lineage.mk)
+ 
+-PRODUCT_NAME := lineage_arm64_bvN4
++PRODUCT_NAME := lineage_a64_bvN4
+ PRODUCT_BRAND := google
+ PRODUCT_MODEL := Generic System
+ 
+diff --git a/lineage_arm64_bvNE.mk b/lineage_a64_bvNE.mk
+similarity index 80%
+rename from lineage_arm64_bvNE.mk
+rename to lineage_a64_bvNE.mk
+index 9b454c3..b725806 100644
+--- a/lineage_arm64_bvNE.mk
++++ b/lineage_a64_bvNE.mk
+@@ -1,11 +1,11 @@
+-TARGET_GAPPS_ARCH := arm64
+-include build/make/target/product/aosp_arm64.mk
++TARGET_GAPPS_ARCH := arm
++include build/make/target/product/aosp_arm.mk
+ $(call inherit-product, device/phh/treble/base.mk)
+ 
+ 
+ $(call inherit-product, device/phh/treble/lineage.mk)
+ 
+-PRODUCT_NAME := lineage_arm64_bvNE
++PRODUCT_NAME := lineage_a64_bvNE
+ PRODUCT_BRAND := google
+ PRODUCT_MODEL := Generic System
+ 
+-- 
+2.53.0
+
